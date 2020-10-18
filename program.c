@@ -9,6 +9,8 @@ int main() {
   while (step != 0x1B) {
     puts("1) Addition");
     puts("2) Subtraction");
+    puts("3) Multiplication");
+    puts("4) Division");
     puts("Selected action:");
     scanf("%d", &step);
 
@@ -29,6 +31,20 @@ int main() {
         puts("Input a and b");
         scanf("%lf %lf", &a, &b);
         result = minus(a, b);
+        printf("%4.4lf\n", result);
+        break;
+
+      case 3:
+        puts("Input a and b");
+        scanf("%lf %lf", &a, &b);
+        result = multiplication(a, b);
+        printf("%4.4lf\n", result);
+        break;
+
+      case 4:
+        puts("Input a and b");
+        scanf("%lf %lf", &a, &b);
+        result = division(a, b);
         printf("%4.4lf\n", result);
         break;
 
