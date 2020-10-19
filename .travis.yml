@@ -4,4 +4,4 @@ dist: xenial
 
 script:
     - make
-    - git ls-files src/ | git diff-exit-code
+    - git ls-files src/
