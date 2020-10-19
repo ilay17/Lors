@@ -3,5 +3,6 @@ compliler: gcc
 dist: xenial
 
 script:
-    - make
+    - make 
+    - make test
     - git ls-files src/
