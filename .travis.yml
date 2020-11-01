@@ -1,5 +1,5 @@
-language: c
-compliler: gcc
+language: c++
+compliler: g++
 dist: xenial
 
 script:

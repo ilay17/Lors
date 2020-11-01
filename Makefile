@@ -7,13 +7,13 @@ folder:
 	$(creat)
 
 bin/calculator: folder build/src/calc.o build/src/program.o
-	gcc build/src/calc.o build/src/program.o -o bin/calculator 
+	g++ build/src/calc.o build/src/program.o -o bin/calculator 
 
-build/src/program.o: src/program.c
-	gcc -c src/program.c -o build/src/program.o
+build/src/program.o: src/program.cpp
+	g++ -c src/program.cpp -o build/src/program.o
 
-build/src/calc.o: src/calc.c
-	gcc -c src/calc.c -o build/src/calc.o
+build/src/calc.o: src/calc.cpp
+	g++ -c src/calc.cpp -o build/src/calc.o
 
 test: bin/test
 
@@ -21,13 +21,13 @@ folder_test:
 	$(fold)
 
 bin/test: folder_test build/test/test.o build/test/calc.o 
-	gcc build/test/calc.o build/test/test.o -o bin/test
+	g++ build/test/calc.o build/test/test.o -o bin/test
 
-build/test/test.o: test/test.c
-	gcc -c test/test.c -o build/test/test.o 
+build/test/test.o: test/test.cpp
+	g++ -c test/test.cpp -o build/test/test.o 
 
-build/test/calc.o: src/calc.c
-	gcc -c src/calc.c -o build/test/calc.o
+build/test/calc.o: src/calc.cpp
+	g++ -c src/calc.cpp -o build/test/calc.o
 
 .PHONY: clean
 
